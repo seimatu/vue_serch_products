@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
 
-<title>electron</title>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+
+    <title>electron</title>
 </head>
+
 <body>
     <h1>hello! electron</h1>
     <form>
-           <p>ID: <input type="text" name="example" placeholder="ここにIDを入力"></p>
-           <p>Password: <input type="password"></p>
-            <button type="submit">送信</button>
-          </form>
+        <p>
+            ID: <input type="text" name="example" placeholder="ここにIDを入力" />
+        </p>
+        <p>Password: <input type="password" /></p>
+        <button type="submit">送信</button>
+    </form>
     <script>
-        const { ipcRenderer } = window.require("electron");
-        function start(){
+        const {
+            ipcRenderer
+        } = window.require("electron");
+        async function start() {
             ipcRenderer.invoke("start1");
-            }
-        
+        }
     </script>
-    <button type="submit" name="name" value="value" onclick="start()">start</button>
-
+    <button type="submit" name="name" value="value" onclick="start()">
+      start
+    </button>
 </body>
+
 </html>
